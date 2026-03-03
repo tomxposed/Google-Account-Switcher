@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Account Switcher</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <h1 class="header-title">Account Switcher</h1>
+      <p class="header-subtitle">Set default accounts per Google service</p>
+    </div>
+  </header>
+
+  <!-- Global default -->
+  <section class="global-section">
+    <label class="global-label" for="default-account">
+      <span class="label-text">Global Default Account</span>
+      <span class="label-hint">Used when a service has no specific setting</span>
+    </label>
+    <select id="default-account" class="account-select global-select" data-service="_default">
+      <option value="">— Disabled —</option>
+      <option value="0">Account 0 (1st)</option>
+      <option value="1">Account 1 (2nd)</option>
+      <option value="2">Account 2 (3rd)</option>
+      <option value="3">Account 3 (4th)</option>
+      <option value="4">Account 4 (5th)</option>
+      <option value="5">Account 5 (6th)</option>
+    </select>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Service cards -->
+  <section class="services" id="services-list">
+    <!-- Cards are injected by popup.js -->
+  </section>
+
+  <!-- Footer actions -->
+  <footer class="footer">
+    <button id="save-btn" class="btn-save">Save Settings</button>
+    <span id="toast" class="toast hidden">✓ Saved!</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

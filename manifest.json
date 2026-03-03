@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Google Account Switcher",
+  "version": "1.0.0",
+  "description": "Automatically redirect Google services to your preferred account. Configure default accounts for Gmail, Calendar, Drive, and more.",
+  "permissions": [
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.youtube.com/*",
+    "*://gmail.com/*",
+    "*://www.gmail.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

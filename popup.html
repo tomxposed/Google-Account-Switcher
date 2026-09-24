@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google Account Switcher</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
+
 <body>
   <!-- Header -->
   <header class="header">
     <div class="header-icon">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
-        <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
+        <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
       </svg>
     </div>
     <div>
@@ -29,13 +31,8 @@
     </label>
     <select id="default-account" class="account-select global-select" data-service="_default">
       <option value="">— Disabled —</option>
-      <option value="0">Account 0 (1st)</option>
-      <option value="1">Account 1 (2nd)</option>
-      <option value="2">Account 2 (3rd)</option>
-      <option value="3">Account 3 (4th)</option>
-      <option value="4">Account 4 (5th)</option>
-      <option value="5">Account 5 (6th)</option>
     </select>
+    <p id="accounts-status" class="label-hint accounts-status"></p>
   </section>
 
   <div class="divider"></div>
@@ -53,4 +50,5 @@
 
   <script src="popup.js"></script>
 </body>
+
 </html>

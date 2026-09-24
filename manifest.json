@@ -5,7 +5,8 @@
   "description": "Automatically redirect Google services to your preferred account. Configure default accounts for Gmail, Calendar, Drive, and more.",
   "permissions": [
     "storage",
-    "webNavigation"
+    "webNavigation",
+    "declarativeNetRequestWithHostAccess"
   ],
   "host_permissions": [
     "*://*.google.com/*",

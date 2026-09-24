@@ -107,6 +107,14 @@ body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radiu
   width: 100%;
 }
 
+.accounts-status {
+  margin-top: 8px;
+}
+
+.accounts-status:empty {
+  display: none;
+}
+
 /* ---- Divider ---- */
 .divider {
   height: 1px;
@@ -126,6 +134,7 @@ body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radiu
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
   background: var(--bg-card);
@@ -143,6 +152,13 @@ body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radiu
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Fixed-width column so long account names don't push the card wider */
+.service-card .account-select {
+  flex: 0 1 130px;
+  min-width: 0;
 }
 
 .service-icon {
@@ -171,6 +187,7 @@ body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radiu
   color: var(--text-primary);
   font-family: inherit;
   font-size: 12px;
+  text-overflow: ellipsis;
   cursor: pointer;
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
